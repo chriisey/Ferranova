@@ -1,0 +1,203 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.orders-container {
+    max-width: calc(60% - 40px);
+    margin: 5vh auto 10vh auto;
+}
+
+.order {
+    border-bottom: 1px solid #ddd;
+    padding: 40px 0;
+}
+
+.dataOrdine {
+    margin: 5px 0 15px 0;
+    font-size: 20px;
+}
+
+.order-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-details p {
+    margin: 5px 0;
+    flex: 50%;
+}
+
+.order-products {
+    display: flex;
+    justify-content: left;
+    gap: 35px;
+    margin-top: 50px;
+    overflow-x: scroll;
+    scrollbar-color: rgba(14, 58, 27, 0.075) transparent;
+}
+
+
+.product {
+    width: 80px;
+    flex: 1;
+    max-width: 120px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 45%;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.product a{
+    text-decoration: none;
+}
+
+.product p {
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.orderList-empty{
+    width: 40%;
+    margin: 12vh 30%;
+    height: auto;
+}
+
+.orderList-empty img{
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* Responsive styles for screens under 850px */
+@media (max-width: 850px) {
+    .orders-container {
+        max-width: calc(80% - 40px);
+    }
+
+    .order-details p {
+        flex: 100%;
+    }
+
+    .order-products {
+        gap: 20px;
+    }
+
+    .product {
+        max-width: 100px;
+    }
+
+    .product img {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .orderList-empty{
+        width: 40%;
+        margin: 15vh 30%;
+        height: auto;
+    }
+}
+
+/* Responsive styles for screens under 600px */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+        margin-left: 45px;
+    }
+
+    .orders-container {
+        max-width: calc(90% - 40px);
+    }
+
+    .order-details {
+        display: block;
+    }
+
+    .order-products {
+        gap: 15px;
+    }
+
+    .product {
+        max-width: 80px;
+    }
+
+    .product img {
+        width: 80px;
+    }
+
+    .orderList-empty{
+        width: 56%;
+        margin: 17vh 22%;
+        height: auto;
+    }
+
+}
+
+/* Responsive styles for screens under 400px */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .orders-container {
+        max-width: calc(100% - 40px);
+    }
+
+    .order-details {
+        display: block;
+    }
+
+    .order-details p {
+        flex: 100%;
+        font-size: 14px;
+    }
+
+    .order-products {
+        gap: 10px;
+    }
+
+    .product {
+        max-width: 60px;
+    }
+
+    .product img {
+        width: 60px;
+    }
+
+
+    .dataOrdine {
+        font-size: 16px;
+    }
+
+    .orderList-empty{
+        width: 60%;
+        margin: 17vh 20%;
+        height: auto;
+    }
+}

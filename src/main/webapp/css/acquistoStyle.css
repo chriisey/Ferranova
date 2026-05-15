@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    width: calc(70% - 40px);
+    color: black;
+    margin: 5vh 15%;
+    text-align: center;
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form h4{
+    font-size: 25px;
+    margin: 35px 0 20px 0;
+}
+
+form h5{
+    font-size: 20px;
+    margin: 35px 0 20px 0;
+}
+
+
+label{
+    font-size: small;
+    display: block;
+    text-align: left;
+    transform: translateX(10%);
+    margin-top: 8px;
+}
+
+input{
+    width: 80%;
+    margin: 20px 10%;
+    height: 35px;
+    border-width: 1px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.divAcquista-button{
+    margin-top: 50px;
+}
+
+.acquista-button{
+    margin-top: 30px !important;
+    font-size: medium;
+    color:white;
+    background-color: #335e1e;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.acquista-button:hover{
+    background-color: #29451c;
+}
+
+.total-price{
+    text-align: left;
+    width: 80%;
+    margin: 15px 10%;
+    border-top: solid 1px black;
+}
+
+.total-price p{
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+@media (max-width: 850px){
+    .wrapper{
+        padding-top: 30px;
+        width: calc(76% - 40px);
+        margin-left: 12%;
+        margin-right: 12%;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 600px){
+    .wrapper{
+        padding-top: 30px;
+        width: calc(84% - 40px);
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 10vh;
+    }
+}
+
+
+@media (max-width: 400px){
+    .wrapper{
+        padding-top: 30px;
+        width: calc(90% - 40px);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10vh;
+    }
+}

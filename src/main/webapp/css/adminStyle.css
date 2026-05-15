@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Bottoni selettori div */
+.buttons-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1vh auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.productsManage-button, .ordersManage-button,  .promoctionsManage-button {
+    font-size: 15px;
+    width: 170px;
+    height: 45px;
+    padding: 10px;
+    color: #335e1e;
+    background-color: white;
+    border: 1px solid #335e1e;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.productsManage-button:hover, .ordersManage-button:hover, .promoctionsManage-button:hover {
+    color: white;
+    background-color: #29451c;
+}
+
+#productsManage-container, #ordersManage-container, #promoctionsManage-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5vh auto;
+}
+
+#productsManage-container {
+    display: block;
+}
+
+#ordersManage-container {
+    display: none;
+}
+
+#promoctionsManage-container{
+    display: none;
+}
+
+/*Parte Gestione Prodotti e Promozioni*/
+
+.headContainer {
+    margin: 15px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-categoryLabel{
+    margin-left: 10px;
+}
+
+.addProduct a, .addPromoction a{
+    padding: 10px 20px;
+    color: white;
+    background-color: #335e1e;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.addPromoction{
+    margin-top: 20px;
+}
+
+.addProduct a:hover, .addPromoction a:hover {
+    background-color: #29451c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+thead {
+    background: #f4f4f4;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+.product-info img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.product-info, .promotion-info, .quantity-container, .price-container, .description-container, .sconto-container, .promotion-container, .quantity-containerMP, .promotion-containerMP{
+    display: flex;
+    align-items: center;
+}
+
+.minus, .plus, .azzera, .removePromoction {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.minus, .plus {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.azzera, .removePromoction {
+    margin-left: 30px;
+    font-size: 15px;
+    background-color: rgba(158, 51, 51, 0.79);
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.changePrice, .modificaPromotion {
+    margin-left: 30px;
+    font-size: 15px;
+    background-color: rgba(51, 94, 30, 0.83);
+    color: white;
+    padding: 3px 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.alert {
+    position: absolute;
+    transition: 0.5s;
+}
+
+
+.alertAnimationOFF{
+    opacity: 0;
+    transform: translateX(240px);
+    visibility: hidden;
+}
+
+.alertAnimationON{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(250px);
+}
+
+
+@media (max-width: 850px) {
+    .productsManage-button, .ordersManage-button,  .promoctionsManage-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    .addProduct a, .addPromoction a{
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .headContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .select-categoryLabel{
+        margin-left: 0;
+    }
+
+    .addProduct, .addPromoction{
+        width: 80%;
+        margin: 10px 10%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .quantity-container, .price-container, .promotion-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .minus, .plus, .azzera, .changePrice, .removePromoction {
+        margin: 10px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttons-container, .orders-container, table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .select-categoryDiv input[type="text"]{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .select-categoryDiv select{
+        width: 80%;
+        margin: 10px 5px 10px 0;
+    }
+
+    .product-info, .promotion-info {
+        margin-top: 50px;
+    }
+
+    .product-info img {
+        margin-bottom: 10px;
+    }
+
+    .quantity-container, .price-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+
+    .price-container, .quantity-container, .promotion-container{
+        align-items: center;
+    }
+
+    .modificaPromotion{
+        width: 80%;
+        margin: 0 10%;
+    }
+
+
+    .alertAnimationOFF{
+        transform: translateX(140px) translateY(55px);
+    }
+
+    .alertAnimationON{
+        transform: translateX(150px)translateY(55px);
+    }
+}
+
+
+/*Parte Ordini Clienti*/
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.orders-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5vh auto 10vh;
+}
+
+.order {
+    border-bottom: 1px solid #ddd;
+    padding: 40px 0;
+}
+
+.dataOrdine {
+    margin: 5px 0 15px;
+    font-size: 20px;
+}
+
+.orderDetails-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
+}
+
+.order-details-manage {
+    width: 35%;
+}
+
+.order-details-manage input {
+    margin-top: 10px;
+}
+
+.inputOrderManage {
+    width: 30%;
+    margin: 10px auto;
+}
+
+.order-details p {
+    margin: 5px 0;
+    flex: 50%;
+    box-sizing: border-box;
+}
+
+.order-products {
+    display: flex;
+    justify-content: left;
+    gap: 35px;
+    margin-top: 50px;
+    overflow-x: scroll;
+}
+
+.product {
+    width: 80px;
+    flex: 1;
+    max-width: 120px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modificaOrdine {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input#submit {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #335e1e;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #29451c;
+}
+
+@media (max-width: 850px) {
+    .orders-container {
+        max-width: 80%;
+    }
+
+    .order-details{
+        width: 100%;
+    }
+
+    .order-details p {
+        flex: 100%;
+    }
+
+    .order-details-manage{
+        width: 100%;
+    }
+
+    .order-products {
+        height: 180px;
+        gap: 20px;
+    }
+
+    .product {
+        max-width: 100px;
+    }
+
+    .product img {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .orders-container {
+        max-width: 90%;
+    }
+
+    .order-details {
+        display: block;
+    }
+
+    .order-products {
+        gap: 15px;
+    }
+
+    .product {
+        max-width: 80px;
+    }
+
+    .product img {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .orders-container {
+        max-width: 100%;
+    }
+
+    .order-details p {
+        font-size: 14px;
+    }
+
+    .order-products {
+        gap: 10px;
+    }
+
+    .product {
+        max-width: 60px;
+    }
+
+    .product img {
+        width: 60px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .dataOrdine {
+        font-size: 16px;
+    }
+}

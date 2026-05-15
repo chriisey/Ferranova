@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 3vh auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.subparagraph {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-section {
+    margin-top: 20px;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 20px;
+    transform: translateY(15px);
+    color: #333;
+}
+
+.info {
+    flex-grow: 1; /*per riempire tutto lo spazio*/
+    margin-right: 20px;
+}
+
+.info label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+.info input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.edit-button {
+    background-color: #335e1e;
+    width: calc(30% - 30px);
+    margin: 10px 35%;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    transform: translateY(13px);
+    text-align: center;
+}
+
+.edit-button:hover {
+    background-color: #29451c;
+}
+
+.cambio-password{
+    color: #121212;
+    width: calc(50% - 30px);
+    margin: 30px 25%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.cambio-password a{
+    color: #335e1e;
+    text-decoration: none;
+}
+
+.cambio-password a:hover{
+    text-decoration: underline;
+}
+
+
+/* Media Queries */
+@media (max-width: 850px) {
+    .container {
+        padding: 15px;
+        margin: 0 auto 10em auto;
+    }
+
+    .profile-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+        transform: none;
+    }
+
+    .info {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .edit-button {
+        width: 90%;
+        margin: 20px 5% 10px 5%;
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .subparagraph {
+        font-size: 13px;
+    }
+
+    .info label, .info input {
+        font-size: 15px;
+    }
+
+    .edit-button {
+        width: 90%;
+        margin: 20px 5% 10px 5%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .subparagraph {
+        font-size: 12px;
+    }
+
+    .info label, .info input {
+        font-size: 14px;
+    }
+
+    .edit-button {
+        width: 90%;
+        margin: 20px 5% 10px 5%;
+        font-size: 14px;
+    }
+}

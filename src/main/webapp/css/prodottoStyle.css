@@ -1,0 +1,111 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    width: 80%;
+    margin: 5vh 10% 10vh 10%;
+    padding: 0;
+    flex-direction: row;
+}
+
+.product-details{
+    text-align: center;
+    align-content: center;
+}
+
+.scontoDiv{
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-image {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centro verticale */
+    justify-content: center; /* Opzionale: centro orizzontale */
+}
+
+.product-image,
+.product-details {
+    width: 50%;
+    height: 350px;
+}
+
+.product-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.product-title {
+    font-size: 25px;
+    margin: 5% 0;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #335e1e;
+}
+
+.quantity-container {
+    font-size: 15px ;
+    margin: 90px 0 25px 0;
+}
+
+#quantity{
+    margin-top: 10px;
+    width: 35px;
+}
+
+.add-to-cart {
+    background-color: #335e1e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #29451c;
+}
+
+.alert {
+     font-size: 15px;
+ }
+
+.product-description {
+    display: block;
+    margin: 30px 10% 20vh 10%;
+    width: 80%;
+    text-align: justify;
+}
+
+.product-description h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column;
+        margin: 2vh 10% 5vh 10%;
+    }
+
+    .product-image,
+    .product-details {
+        width: 100%;
+    }
+
+}

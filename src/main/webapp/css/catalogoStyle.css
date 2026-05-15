@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    padding-top: 60px !important;
+}
+
+.container-catalogo{
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.sidebar .ul-sottocategorie{
+    list-style: none;
+}
+
+.sidebar .ul-sottocategorie li{
+    margin: 15px 0;
+    color: black;
+}
+
+.ricerca{
+    margin-top: 5px;
+    width: 95%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.rangePrice{
+    width: 95%;
+}
+
+.redirect-button{
+    width: 50%;
+    margin: 10px 25%;
+    color: white;
+    padding: 5px 10px;
+    background-color: #335e1e;
+    border: none;
+    border-radius: 10px;
+}
+
+.redirect-button:hover{
+    background-color: #29451c;
+}
+
+.content {
+    width: 80%;
+    padding: 40px 20px;
+}
+
+.product {
+    display: inline-block;
+    width: 220px;
+    height: 280px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+/*contain serve ad tenerèl'immagine di una buona qualità e ridimensionare*/
+.product img {
+    width: 100%;
+    height: 55%;
+    object-fit: contain;
+}
+
+.product:hover {
+    border-color: #29451c;
+}
+
+.product a{
+    text-decoration: none;
+}
+
+.product-title {
+    color: black;
+    font-size:large;
+    margin: 10px 0;
+    /*se il titolo è troppo lungo va a mettere i puntini*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    display: flex;
+    justify-content: center;
+    color:#335e1e;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.product-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #335e1e;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.product-button:hover{
+    background-color: #29451c;
+}
+
+.product .alert{
+    position: absolute;
+    font-size: 15px;
+    left: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container-catalogo{
+        flex-direction: column;
+    }
+    .sidebar {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+    .content {
+        width: calc(100% - 20px);
+        padding: 20px 10px;
+    }
+    .product {
+        width: calc(48% - 24px);
+        margin: 1%;
+    }
+}
