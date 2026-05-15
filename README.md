@@ -1,4 +1,4 @@
-# E-Commerce Project
+# E-Commerce ProjecT (Ferranova)
 
 This project is a simple e-commerce web application developed for a university course AT UniSA
 
